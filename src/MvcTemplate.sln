@@ -7,10 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demos.Common", "Demos.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demos.Web", "Demos.Web\Demos.Web.csproj", "{4CDBA367-6515-4690-B425-E1063215EC9F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9A4D8A90-27DB-44CA-B372-B7A434905BD7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{9A4D8A90-27DB-44CA-B372-B7A434905BD7}"
 	ProjectSection(SolutionItems) = preProject
 		..\readme.md = ..\readme.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{9FF92566-1E59-4EEF-9A29-EC9AEE4BE9B7}"
+	ProjectSection(SolutionItems) = preProject
+		..\build\deploy-develop-latest.bat = ..\build\deploy-develop-latest.bat
+		..\build\deploy.proj = ..\build\deploy.proj
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demos.Web.Areas.Admin", "Demos.Web\Areas\Admin\Demos.Web.Areas.Admin.csproj", "{721A183D-FF95-42B1-8E37-69DE361F774B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +34,10 @@ Global
 		{4CDBA367-6515-4690-B425-E1063215EC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CDBA367-6515-4690-B425-E1063215EC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CDBA367-6515-4690-B425-E1063215EC9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721A183D-FF95-42B1-8E37-69DE361F774B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721A183D-FF95-42B1-8E37-69DE361F774B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721A183D-FF95-42B1-8E37-69DE361F774B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721A183D-FF95-42B1-8E37-69DE361F774B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

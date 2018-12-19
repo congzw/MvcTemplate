@@ -5,7 +5,13 @@ a basic mvc5 template for web site
 ## todo
 
 - [x] webapi support(jsonp, cors, ...)
-- [] theme support
+- [x] module areas & ci build support
+- [] multi theme support
 - [] ui fx support
-- [] module areas & auto deploy scripts 
 - [] di support
+
+
+## build
+
+- for developer machine use: deploy-develop-latest.bat 
+- for ci server use: deploy.proj

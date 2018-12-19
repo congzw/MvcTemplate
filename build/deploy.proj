@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="MyBuildAndDeploy">
+	<PropertyGroup>
+		<VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+		<MyWebFolderName Condition="'$(MyWebFolderName)' == ''">Demos.Web</MyWebFolderName>
+		<MyWebContainerPathInput Condition="'$(MyWebContainerPathInput)' == ''">..\src</MyWebContainerPathInput>
+		<MyWebContainerPathOutput Condition="'$(MyWebContainerPathOutput)' == ''">.\output</MyWebContainerPathOutput>
+	</PropertyGroup>
+
+	<Target Name="MyBuildAndDeploy" Condition="$(MyWebContainerPathOutput) != ''">
+		<Message Text="----MyCopyWebFiles完成----" Importance="high"/>
+		<CallTarget Targets="MyCopyWebFiles"/>
+		<CallTarget Targets="MyCopyAreaFiles"/>
+		<CallTarget Targets="MyCopyWebBinFiles"/>
+	</Target>
+		
+	<Target Name="MyCopyWebFiles">
+		<ItemGroup>
+			<CopyWebFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\App_Code\*.cs"/>
+			<CopyWebFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\App_Data\**\*.*"/>
+			<CopyWebFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\Content\**\*.*"/>
+			<CopyWebFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\Themes\**\*.*"/>
+			<CopyWebFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\Views\**\*.*"/>
+			<CopyWebFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\Global.asax"/>
+			<CopyWebFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\log4net.config"/>
+			<CopyWebFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\web.config"/>
+		</ItemGroup>
+		<Copy
+			SourceFiles="@(CopyWebFiles)"
+			DestinationFiles="@(CopyWebFiles->'$(MyWebContainerPathOutput)\%(RecursiveDir)%(Filename)%(Extension)')"
+			SkipUnchangedFiles="true"
+		/>
+		<Message Text="----MyCopyWebFiles完成----" Importance="high"/>
+	</Target>
+
+	<Target Name="MyCopyAreaFiles">
+		<ItemGroup>
+			<CopyAreaFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\Areas\*\Content\**\*.*"/>
+			<CopyAreaFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\Areas\*\Views\**\*.*"/>
+			<CopyAreaFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\Areas\*\web.config"/>
+		</ItemGroup>
+		<Copy
+			SourceFiles="@(CopyAreaFiles)"
+			DestinationFiles="@(CopyAreaFiles->'$(MyWebContainerPathOutput)\%(RecursiveDir)%(Filename)%(Extension)')"
+			SkipUnchangedFiles="true"
+		/>
+		<Message Text="----MyCopyAreaFiles完成----" Importance="high"/>
+	</Target>
+
+	<Target Name="MyCopyWebBinFiles">
+		<ItemGroup>
+			<CopyWebBinFiles Include="$(MyWebContainerPathInput)\*$(MyWebFolderName)\bin\**\*.*"/>
+		</ItemGroup>
+		<Copy
+			SourceFiles="@(CopyWebBinFiles)"
+			DestinationFiles="@(CopyWebBinFiles->'$(MyWebContainerPathOutput)\%(RecursiveDir)%(Filename)%(Extension)')"
+			SkipUnchangedFiles="true"
+		/>
+		<Message Text="----MyCopyWebBinFiles完成----" Importance="high"/>
+	</Target>
+</Project>
