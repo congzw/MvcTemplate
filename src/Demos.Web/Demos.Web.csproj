@@ -101,12 +101,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\109x39.png" />
+    <Content Include="Content\images\64x64.png" />
+    <Content Include="Content\images\bg_001.gif" />
+    <Content Include="Content\images\bg_002.gif" />
+    <Content Include="Content\images\bg_003.gif" />
+    <Content Include="Content\images\bg_004.gif" />
+    <Content Include="Content\images\bg_005.gif" />
+    <Content Include="Content\libs\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\libs\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\libs\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\libs\jquery\jquery.js" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Themes\Theme01\Views\Home\_DemoPartial01.cshtml" />
+    <Content Include="Themes\Theme01\Views\Shared\_DemoPartial03.cshtml" />
+    <Content Include="Themes\Theme01\Views\Shared\_Layout.cshtml" />
+    <Content Include="Themes\Theme01\Views\web.config" />
+    <Content Include="Themes\Theme02\Areas\Admin\Views\Shared\_DemoPartial01.cshtml" />
+    <Content Include="Themes\Theme02\Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Themes\Theme02\Areas\Admin\Views\web.config" />
+    <Content Include="Themes\Theme02\Views\Home\_DemoPartial02.cshtml" />
+    <Content Include="Themes\Theme02\Views\Shared\_DemoPartial04.cshtml" />
+    <Content Include="Themes\Theme02\Views\Shared\_Layout.cshtml" />
+    <Content Include="Themes\Theme02\Views\web.config" />
+    <Content Include="Views\Shared\_DemoAll.cshtml" />
+    <Content Include="Views\Shared\_DemoPartial01.cshtml" />
+    <Content Include="Views\Shared\_DemoPartial02.cshtml" />
+    <Content Include="Views\Shared\_DemoPartial03.cshtml" />
+    <Content Include="Views\Shared\_DemoPartial04.cshtml" />
+    <Content Include="Views\Shared\_FileStructrues.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_IEFix.cshtml" />
+    <Content Include="Views\Shared\_Nav.cshtml" />
+    <Content Include="Content\libs\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\libs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\libs\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="App_Code\DemoHelper.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -134,10 +171,13 @@
       <Project>{e7cb2e23-0be0-4702-b249-3ee03a89cdb8}</Project>
       <Name>Demos.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="Areas\Admin\Demos.Web.Areas.Admin.csproj">
+      <Project>{721a183d-ff95-42b1-8e37-69de361f774b}</Project>
+      <Name>Demos.Web.Areas.Admin</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\" />
-    <Folder Include="Content\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

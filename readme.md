@@ -6,9 +6,9 @@ a basic mvc5 template for web site
 
 - [x] webapi support(jsonp, cors, ...)
 - [x] module areas & ci build support
-- [] multi theme support
-- [] ui fx support
-- [] di support
+- [x] multi theme support
+- [ ] ui fx support
+- [ ] di support
 
 
 ## build

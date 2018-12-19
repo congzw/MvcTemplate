@@ -1,6 +1,6 @@
 ﻿using System;
-// ReSharper disable once CheckNamespace
 
+// ReSharper disable once CheckNamespace
 namespace Demos.Common
 {
     public static class ObjectExtensions

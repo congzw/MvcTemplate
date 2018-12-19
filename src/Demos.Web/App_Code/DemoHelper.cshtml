@@ -1,0 +1,21 @@
+﻿@using Demos.Common.Themes
+@functions
+{
+    public static string GetCurrentTheme()
+    {
+        var themeManager = ThemeManager.Resolve();
+        var themeName = themeManager.GetTheme();
+        return themeName;
+    }
+}
+
+@helper ShowCurrentTheme()
+{
+    var themeName = GetCurrentTheme();
+    <p>Current Theme: <span style="color: red;">@themeName</span></p>
+}
+
+@helper ShowCurrentPath()
+{
+    <p>@VirtualPath</p>
+}

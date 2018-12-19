@@ -1,0 +1,42 @@
+﻿@{
+    var adminViews = new DirectoryInfo(Server.MapPath("~/Areas/Admin/Views/"));
+    var themes = new DirectoryInfo(Server.MapPath("~/Themes/"));
+    var theme = DemoHelper.GetCurrentTheme() ?? "";
+}
+
+<ul>
+    <li>
+        @ShowTree(themes, theme)
+    </li>
+</ul>
+
+@helper ShowTree(DirectoryInfo dirInfo, string theme)
+{
+    var folder = (new Uri(Server.MapPath("~/"))).MakeRelativeUri(new Uri(dirInfo.FullName)).ToString();
+    <span>~/@folder</span>
+    var isCurrentTheme = !string.IsNullOrWhiteSpace(theme) && folder.IndexOf(theme, StringComparison.OrdinalIgnoreCase) != -1;
+    <ul>
+        @foreach (FileInfo file in dirInfo.GetFiles())
+        {
+            if (file.FullName.EndsWith(".config"))
+            {
+                continue;
+            }
+            
+            var showFileName = Path.GetFileName(file.FullName);
+            
+            if (isCurrentTheme)
+            {
+                <li style="color: red">@showFileName</li>
+            }
+            else
+            {
+                <li>@showFileName</li>
+            }
+        }
+    </ul>
+    foreach (DirectoryInfo directory in dirInfo.GetDirectories())
+    {
+        @ShowTree(directory, theme)
+    }
+}

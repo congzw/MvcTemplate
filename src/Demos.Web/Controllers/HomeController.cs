@@ -8,5 +8,10 @@ namespace Demos.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult NotExist()
+        {
+            return View();
+        }
     }
 }

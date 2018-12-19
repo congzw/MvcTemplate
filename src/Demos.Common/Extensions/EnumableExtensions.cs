@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-// ReSharper disable once CheckNamespace
 
+// ReSharper disable once CheckNamespace
 namespace Demos.Common
 {
     public static class EnumableExtensions
