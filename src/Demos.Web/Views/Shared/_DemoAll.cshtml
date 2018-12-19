@@ -17,14 +17,14 @@
             <li><a href="@Url.Action("Index", "Home", new { area = ""})">Home Index</a></li>
             <li><a href="@Url.Action("Index", "Home", new { area = "", theme = "theme01" })">Home Index Theme01</a></li>
             <li><a href="@Url.Action("Index", "Home", new { area = "", theme = "theme02" })">Home Index Theme02</a></li>
-            <li><a href="@Url.Action("NotExist", "Home", new { theme = Request.Params["theme"]})">Home NotExit</a></li>
+            <li><a href="@Url.Action("NotExist", "Home", new { theme = Request.Params["theme"]})">Home NotExist</a></li>
         </ul>
         <h2>AREA</h2>
         <ul>
             <li><a href="@Url.Action("Index", "Home", new { area = testArea })">Admin Home Index</a></li>
             <li><a href="@Url.Action("Index", "Home", new { area = testArea, theme = "theme01" })">Admin Home Index Theme01</a></li>
             <li><a href="@Url.Action("Index", "Home", new { area = testArea, theme = "theme02" })">Admin Home Index Theme02</a></li>
-            <li><a href="@Url.Action("NotExist", "Home", new { area = testArea, theme = Request.Params["theme"] })">Home NotExit</a></li>
+            <li><a href="@Url.Action("NotExist", "Home", new { area = testArea, theme = Request.Params["theme"] })">Home NotExist</a></li>
         </ul>
     </div>
     <div class="col-md-8">

@@ -138,7 +138,6 @@
     <Content Include="Views\Shared\_FileStructrues.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_IEFix.cshtml" />
-    <Content Include="Views\Shared\_Nav.cshtml" />
     <Content Include="Content\libs\bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\libs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
