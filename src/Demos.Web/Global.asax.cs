@@ -10,10 +10,16 @@ namespace Demos.Web
         {
             MainEntry.Init();
         }
-
+        protected void Application_PostAuthorizeRequest()
+        {
+            ////Force a Session for WebApi use
+            //HttpContext.Current.SetSessionStateBehavior(System.Web.SessionState.SessionStateBehavior.Required);
+        }
+        
         protected void Session_Start(object sender, EventArgs e)
         {
-
+            //Force Use Session For A Static SessionId 
+            //Session["init"] = 0;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
